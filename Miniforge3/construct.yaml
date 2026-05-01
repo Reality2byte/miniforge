@@ -49,7 +49,7 @@ specs:
 
 virtual_specs:
   - __glibc >=2.17 # [linux]
-  - __osx >=10.13 # [osx]
+  - __osx >=11.0 # [osx]
 
 installer_type: {{ os.environ.get("MINIFORGE_INSTALLER_TYPE", "sh") }}  # [unix]
 installer_type: {{ os.environ.get("MINIFORGE_INSTALLER_TYPE", "exe") }}  # [win]

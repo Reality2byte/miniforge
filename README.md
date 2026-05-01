@@ -87,7 +87,7 @@ Latest installers with Python 3.13 `(*)` in the base environment:
 | Linux   | x86_64 (amd64)                | glibc >= 2.17   | `Miniforge3-Linux-x86_64.sh`        |
 | Linux   | aarch64 (arm64) `(**)`        | glibc >= 2.17   | `Miniforge3-Linux-aarch64.sh`       |
 | Linux   | ppc64le (POWER8/9)            | glibc >= 2.17   | `Miniforge3-Linux-ppc64le.sh`       |
-| macOS   | x86_64                        | macOS >= 10.13  | `Miniforge3-MacOSX-x86_64.{sh,pkg}` |
+| macOS   | x86_64                        | macOS >= 11.0   | `Miniforge3-MacOSX-x86_64.{sh,pkg}` |
 | macOS   | arm64 (Apple Silicon) `(***)` | macOS >= 11.0   | `Miniforge3-MacOSX-arm64.{sh,pkg}`  |
 | Windows | x86_64 `(****)`               | Windows >= 10   | `Miniforge3-Windows-x86_64.exe`     |
 
@@ -338,6 +338,12 @@ bash scripts/test.sh
 ```
 
 ## Support for older operating systems
+
+### Support for macOS 10.13-10.15
+
+If you require support for macOS 10.13 through 10.15 you may download version
+26.1.1-3 of miniforge available at
+https://github.com/conda-forge/miniforge/releases/tag/26.1.1-3
 
 ### Support for macOS 10.9-10.12
 
