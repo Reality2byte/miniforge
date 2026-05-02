@@ -43,7 +43,7 @@ ls -al "${TEMP_DIR}"
 if [[ "${TARGET_PLATFORM}" != win-* ]]; then
     # Assumes specific structure in construct.yaml
     MICROMAMBA_VERSION=$(grep "set mamba_version" Miniforge3/construct.yaml | cut -d '=' -f 2 | cut -d '"' -f 2)
-    MICROMAMBA_BUILD=1
+    MICROMAMBA_BUILD=0
     mkdir "${TEMP_DIR}/micromamba"
     pushd "${TEMP_DIR}/micromamba"
     MICROMAMBA_SOURCE_URL="${MICROMAMBA_SOURCE_URL:-https://anaconda.org/conda-forge/micromamba/${MICROMAMBA_VERSION}/download/${TARGET_PLATFORM}/micromamba-${MICROMAMBA_VERSION}-${MICROMAMBA_BUILD}.tar.bz2}"
@@ -62,7 +62,7 @@ echo "***** Set virtual package versions *****"
 if [[ "${TARGET_PLATFORM}" == linux-* ]]; then
     export CONDA_OVERRIDE_GLIBC=2.17
 elif [[ "${TARGET_PLATFORM}" == osx-64 ]]; then
-    export CONDA_OVERRIDE_OSX=10.13
+    export CONDA_OVERRIDE_OSX=11.0
 elif [[ "${TARGET_PLATFORM}" == osx-arm64 ]]; then
     export CONDA_OVERRIDE_OSX=11.0
 fi
