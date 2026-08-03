@@ -1,10 +1,10 @@
-{% set version = os.environ.get("MINIFORGE_VERSION", "26.3.2-3") %}
-{% set conda_libmamba_solver_version = "26.4.2" %}
+{% set version = os.environ.get("MINIFORGE_VERSION", "26.5.3-0") %}
+{% set conda_libmamba_solver_version = "26.7.0" %}
 # This file is parsed by the scripts to define
 #   - `MICROMAMBA_VERSION` in `scripts/build.sh`
 #   - `MAMBA_VERSION` in `scripts/test.sh`
 # FUTURE: Update again when https://github.com/conda-forge/miniforge/issues/883 is addressed
-{% set mamba_version = "2.5.0" %}
+{% set mamba_version = "2.8.0" %}
 
 name: Miniforge3
 version: {{ version }}
@@ -33,7 +33,7 @@ initialize_conda: True
 initialize_by_default: False
 
 user_requested_specs:
-  - python 3.13.*
+  - python 3.14.*
   - conda >={{ version.split("-")[0] }}
   - mamba >={{ mamba_version }}
   - pip
@@ -41,7 +41,7 @@ user_requested_specs:
   - miniforge_console_shortcut 1.*  # [win]
 
 specs:
-  - python 3.13.*
+  - python 3.14.*
   - conda {{ version.split("-")[0] }}
   - mamba {{ mamba_version }}
   - conda-libmamba-solver {{ conda_libmamba_solver_version }}
