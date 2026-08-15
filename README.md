@@ -80,7 +80,7 @@ on Windows, edit with `notepad $PROFILE`) the activation command.
 
 ## Requirements and installers
 
-Latest installers with Python 3.13 `(*)` in the base environment:
+Latest installers with Python 3.14 `(*)` in the base environment:
 
 | OS      | Architecture                  | Minimum Version | File                                |
 | ------- | ----------------------------- | --------------- | ----------------------------------- |
@@ -104,6 +104,22 @@ The versions listed as "System: 32-bit" are not compatible with the installers o
 
 `(****)` The Windows installer requires Windows 10 or later. However, we are unsure exactly what version of Windows 10.
 We need [help](https://github.com/conda-forge/miniforge/issues/599) from users to maintain the backlog of windows questions.
+
+### Support for Python 3.13 in the base environment
+
+The base environment switched from Python 3.13 to Python 3.14 in version
+26.5.3-0. The last release with Python 3.13 in the base environment is
+26.3.2-3, available at
+https://github.com/conda-forge/miniforge/releases/tag/26.3.2-3
+
+In most cases you do not need an older installer: as noted in `(*)` above, the
+base environment's Python version does not limit the Python versions you can
+install elsewhere, so you can keep the latest installer and create an
+environment with the version you need, for example
+
+```sh
+conda create --name my_project python=3.13
+```
 
 ## Install
 
