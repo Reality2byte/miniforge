@@ -52,11 +52,8 @@ jobs:
             DOCKER_ARCH: amd64
             DOCKERIMAGE: condaforge/linux-anvil-x86_64:alma10
             OS_NAME: "Linux"
-            # Reduce the test matrix because the builds timeouts on emulated architectures
-            # The time consuming operation is an attempt a full solve of conda/mamba/boa
-            # for as a compatibility
-            # xref https://github.com/conda-forge/miniforge/pull/361
-            TEST_IMAGE_NAMES: "ubuntu:24.04"
+            # No testing until docker image has been created
+            TEST_IMAGE_NAMES: " "
 
           - os: ubuntu-latest
             ARCH: x86_64
